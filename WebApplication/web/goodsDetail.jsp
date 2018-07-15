@@ -19,8 +19,7 @@
         <div class="item-mc">
             <div class="book-detail-content"><p>   《鲁滨逊漂流记》每个人的一生都不会是一帆风顺的，总会遇到一些意外与困难。当意外与困难来临时，应该学会接受和面对，用一颗积极乐观的心，去看待世界，对世界和明天抱有美丽的渴望、期待与信念。就像主人公鲁滨逊一样，他流落荒岛，在一次次坎坷曲折的磨难中，勇敢无畏、机警果断、自立自救、坚韧不拔，展现着男子汉的阳刚。翻开书卷，感受那跳动的脉搏和生命的火焰。</p></div>
         </div>
-        <h3>商品评论</h3>
-        
+
         </div>
         <% }%>
         <%if(request.getParameter("id").equals("1")) {%>
@@ -35,7 +34,6 @@
 　　正如著名学者袁行霈评价《茶花女》时所言：是什么感动我呢？主要是这个处于社会底层的女子所受到的不公正的待遇。作为一名妓女，茶花女玛格丽特，并不是放荡无情麻木不堪供人戏弄的玩物，她纯洁、多情，活泼有生气，敢爱敢恨，富有奉献精神，最后为了爱人，放弃自己的全部。写爱情，写悲剧的小说很多，但像《茶花女》这样，简单、真诚、打动人心的作品，屈指可数，也正因为这份真诚的爱与痛，才让本书能历经岁月淘洗，成为经典名著。
        </p></div>
         </div>
-        <h3>商品评论</h3>
         
         </div>
         <% }%>
@@ -49,7 +47,6 @@
         <div class="item-mc">
             <div class="book-detail-content"><p>学习Java必备好书！</p></div>
         </div>
-        <h3>商品评论</h3>
         
         </div>
         <% }%>
@@ -62,9 +59,7 @@
         </div>
         <div class="item-mc">
             <div class="book-detail-content"><p>  学习Javascript必备工具书！</p></div>
-        </div>
-        <h3>商品评论</h3>
-        
+        </div>   
         </div>
         <% }%>
         <%if(request.getParameter("id").equals("4")) {%>
@@ -77,8 +72,6 @@
         <div class="item-mc">
             <div class="book-detail-content"><p>  让你爱上c#编程!</p></div>
         </div>
-        <h3>商品评论</h3>
-        
         </div>
         <% }%>
         <td align="center" colspan="3"><a href="DoCart.jsp?action=buy&id=<%=request.getParameter("id")%>">加入购物车</a></td>
