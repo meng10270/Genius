@@ -16,6 +16,7 @@
 ## 开发工具：NetBeanS、MySQL、GitHub
 ## 过程展示
 ## 数据库构建：
+![](https://github.com/meng10270/Genius/blob/master/screenshots/%E8%B4%AD%E7%89%A9%E8%BD%A6.PNG)
 ## MVC架构展示：
 ## JSON应用展示：
 ## 效果展示：
@@ -27,4 +28,4 @@
 |商品详情|
 |个人信息管理|
 |个人订单管理|
-|下订单|
+|订单结算|
