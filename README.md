@@ -16,7 +16,7 @@
 ## 开发工具：NetBeanS、MySQL、GitHub
 ## 过程展示
 ## 数据库构建：
-![](https://github.com/meng10270/Genius/blob/master/screenshots/%E8%B4%AD%E7%89%A9%E8%BD%A6.PNG)
+![](https://github.com/meng10270/Genius/blob/master/screenshots/sql.PNG)
 ## MVC架构展示：
 ![](https://github.com/meng10270/Genius/blob/master/screenshots/mvc.PNG)
 ## JSON应用展示：
