@@ -22,7 +22,7 @@
 |**页面**|**效果图**|
 |---|---
 |用户登陆注册|
-|商城主页|
+|商城主页|![]("https://github.com/meng10270/Genius/blob/master/screenshots/%E4%B8%BB%E9%A1%B5.PNG")
 |购物车|
 |商品详情|
 |个人信息管理|
