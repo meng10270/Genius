@@ -5,10 +5,28 @@
  */
 package genius.domain;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author romen
+ * @author Meng
  */
 public class GoodsList {
-    
+    private final ArrayList<GoodsSingle> goodsList = new ArrayList<>();
+    public ArrayList<GoodsSingle> getGoodList(){
+        return this.goodsList;
+    }
+    public GoodsSingle findGoods(int i) {
+        return goodsList.get(i);
+    }
+    public void addGoods(GoodsSingle g) {
+        this.goodsList.add(g);
+    }
+    public void removeGoods(GoodsSingle g) {
+        int index = goodsList.indexOf(g);
+        this.goodsList.remove(index);
+    }
+    public void clearGoods() {
+        this.goodsList.clear();
+    }
 }

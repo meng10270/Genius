@@ -2,19 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>UserRegisterServlet</servlet-name>
-        <servlet-class>genius.action.UserRegisterServlet</servlet-class>
+        <servlet-class>genius.action.UserRegisterAction</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UserLoginServlet</servlet-name>
-        <servlet-class>genius.action.UserLoginServlet</servlet-class>
+        <servlet-class>genius.action.UserLoginAction</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdateUserInfo</servlet-name>
-        <servlet-class>genius.action.UpdateUserInfo</servlet-class>
+        <servlet-class>genius.action.UpdateUserInfoAction</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>GetUserInfo</servlet-name>
-        <servlet-class>genius.action.GetUserInfo</servlet-class>
+        <servlet-class>genius.action.GetUserInfoAction</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserRegisterServlet</servlet-name>
