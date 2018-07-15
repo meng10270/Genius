@@ -32,25 +32,41 @@ else  { %>
     <center>
     <table>
         <tr height="50">
-            <td colspan="3" align="center" ><h1> 购物商城 </h1></td>
+            <td colspan="3" align="center" ><h1>购物商城</h1></td>
         </tr>
-        <tr align="center" height="30" bgcolor="grey">
-            <td>名称</td>
-            <td>价格</td>
-            <td>购买</td>
-        </tr>
+         <tr align="center" height="50">
+        <%
+            for(int i = 0; i < goodsList.size(); i++){
+
+        %>
+      
+            <td><a href="goodsDetail.jsp?id=<%=i%>"><img src="images/<%=i%>.jpg"  alt=""/></td>
+ 
+       <%}%>
+       </tr>
+       <tr align="center" height="50">
+           <%
+            for(int j = 0; j < goodsList.size(); j++){
+                GoodsSingle single = (GoodsSingle)goodsList.get(j);
+        %>
+      
+           <td><a href="goodsDetail.jsp?id=<%=j%>"><%= single.getName() %></td>
+
+        <%
+            }
+        %>
+          </tr>
+             <tr align="center" height="50">
         <%
             for(int i = 0; i < goodsList.size(); i++){
                 GoodsSingle single = (GoodsSingle)goodsList.get(i);
         %>
-        <tr align="center" height="50">
-            <td><a href="goodsDetail.jsp?id=<%=i%>"><img src="/WebApplication/images/<%=i%>.jpg"  alt=""/><br><%= single.getName() %></td>
-            <td><%= single.getPrice() %></td>
-            <td><a href="DoCart.jsp?action=buy&id=<%=i%>">加入购物车</a></td>
-        </tr>
-        <%
+      
+                    <td>￥<%= single.getPrice() %></td>
+          <%
             }
         %>
+          </tr>
     </table>
         </center>
     </body>
