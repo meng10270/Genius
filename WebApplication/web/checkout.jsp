@@ -46,19 +46,18 @@
             <td colspan="3" align="left" ><h4>应付金额：<%= total %></h4></td>
         </tr>
         </table>
-        <%getUserInfo.getUserInfo(user.getUsername());%>
         <td><h3>收货人信息:</h3></td>  
         <td>姓名：</td>
-        <td><%if(getUserInfo.getFullname()!=null)%><%=getUserInfo.getFullname()%></td><br>
+        <td><%=user.getFullname()%></td><br>
         <td>电话：</td>
-        <td><%if(getUserInfo.getPhone()!=null)%><%=getUserInfo.getPhone()%></td><br>
+        <td><%=user.getPhone()%></td><br>
         <td>收货地址：</td>
-        <td><%if(getUserInfo.getAddress()!=null)%><%=getUserInfo.getAddress()%></td><br>
+        <td><%=user.getAddress()%></td><br>
         <h3>是否确认提交订单？</h3>
-        <a href="/SubmitOrder.jsp">确认</a>
-        <a href="/ShowCart.jsp">取消</a>
+        <a href="SubmitOrder.jsp">确认</a>
+        <a href="ShowCart.jsp">取消</a>
     <% }else {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("index.jsp");
         }
     %>
     </body>

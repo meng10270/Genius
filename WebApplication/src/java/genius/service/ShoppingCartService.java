@@ -13,13 +13,16 @@ import genius.domain.User;
  * @author Meng
  */
 public class ShoppingCartService {
-    User user=new User();
-    public void emptyCart()
+    public void emptyCart(String userid)
     {
         String[] sqls = {"delete from cart where userid=?"};
-        String[][] parameters = {{user.getUsername()}};
+        String[][] parameters = {{userid}};
         DBUtils.updates(sqls, parameters);
     }
-    public void updateCart()
-    {}
+    public void updateCart(String userid,String itemname,String quantity,String singleprice)
+    {
+        String[] sqls = {"insert into cart set userid=?,itemname=?,quantity=?,singleprice=?"};
+        String[][] parameters = {{userid,itemname,quantity,singleprice}};
+        DBUtils.updates(sqls, parameters);
+    }
 }

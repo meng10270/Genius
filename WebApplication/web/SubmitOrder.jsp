@@ -8,6 +8,7 @@
 <%@ page import="genius.domain.GoodsSingle" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="myCart" class="genius.domain.ShoppingCart" scope="session"/>
+<jsp:useBean id="user" class="genius.domain.User" scope="session" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +24,7 @@
                 double money = single.getPrice() * single.getNum();
                 total += money;
         }
-        String sql="insert into `order` set orderid='"+orderid+"',total='"+total+"',userid='"+session.getAttribute("userid")+"',fullname='"+getUserInfo.getFullname()+"',phone='"+getUserInfo.getPhone()+"',address='"+getUserInfo.getAddress()+"'";
+        String sql="insert into `order` set orderid='"+orderid+"',total='"+total+"',userid='"+user.getUsername()+"',fullname='"+user.getFullname()+"',phone='"+user.getPhone()+"',address='"+user.getAddress()+"'";
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping?user=root&password=123456ja&useUnicode=true&characterEncoding=UTF8&useSSL=false");

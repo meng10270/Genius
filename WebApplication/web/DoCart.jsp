@@ -10,6 +10,7 @@
 <jsp:useBean id="myCart" class="genius.domain.ShoppingCart" scope="session"/>
 <jsp:useBean id="myGoodsList" class="genius.domain.GoodsList" scope="session"/>
 <jsp:useBean id="user" class="genius.domain.User" scope="session" />
+<jsp:useBean id="shoppingCartService" class="genius.service.ShoppingCartService" scope="session" />
 <%  ArrayList buyList = myCart.getBuys();
     String action = request.getParameter("action");
         if(action.equals("buy")){
@@ -52,31 +53,10 @@
         response.sendRedirect("home.jsp");
     }
     
-    String sql1="delete from cart where userid='"+user.getUsername()+"'";
-    try{ 
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping?user=root&password=123456ja&useUnicode=true&characterEncoding=UTF8&useSSL=false");
-        PreparedStatement stmt1 = conn.prepareStatement(sql1);
-        stmt1.executeUpdate();
-        conn.close();
-        stmt1.close();
-       } catch(HeadlessException | ClassNotFoundException | SQLException e)
-       {
-            System.out.println(e.getMessage());
-       }
+    shoppingCartService.emptyCart(user.getUsername());
+    
     for(int i = 0; i < buyList.size(); i++){
         GoodsSingle single = (GoodsSingle)buyList.get(i);
-        String sql2="insert into cart set userid='"+user.getUsername()+"',itemname='"+single.getName()+"',quantity='"+single.getNum()+"',singleprice='"+single.getPrice()+"'";
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping?user=root&password=123456ja&useUnicode=true&characterEncoding=UTF8&useSSL=false");
-            PreparedStatement stmt2 = conn.prepareStatement(sql2);
-            stmt2.executeUpdate();
-            stmt2.close();
-            conn.close();
-            } catch(HeadlessException | ClassNotFoundException | SQLException e)
-            {
-                System.out.println(e.getMessage());
-            }
+        shoppingCartService.updateCart(user.getUsername(), single.getName(), Integer.toString(single.getNum()), String.valueOf(single.getPrice()));
     }
 %>
