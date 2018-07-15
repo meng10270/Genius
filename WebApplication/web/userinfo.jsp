@@ -45,29 +45,38 @@
 		 		}
 		 		// ); //-使用匿名函数, 需要去掉这里的注释
 	</script>
+   
     <body>
+          <h1><font size="40" color = "orange"> 我的信息</font></h1>
+  
         <form action="UserAction?type=3" method="post">
         <% if(user.getUsername()!=null) {%>
-        <h1>我的信息</h1>
-        <td>用户名：</td>
+      
+        
+        <td> 用户名：&nbsp; &nbsp;</td>
         <td><input type="text" id="indata1" name="username" size="30" value="<%=user.getUsername()%>" readonly="true"</td><br>
-        <td>密码：</td>
+        <td>密&nbsp;&nbsp;&nbsp;码：&nbsp;&nbsp;&nbsp;</td>
         <td><input type="password" id="indata2" name="password" size="30" value="<%=user.getPassword()%>"</td><br>
-        <td>姓名：</td>
+        <td>姓&nbsp;&nbsp;&nbsp;名：&nbsp;&nbsp;&nbsp;</td>
         <td><input type="text" id="indata3" name="fullname" size="30" value="<%=user.getFullname()%>"</td><br>
-        <td>性别：</td>
+        <td>性&nbsp;&nbsp;&nbsp;别：&nbsp;&nbsp;&nbsp;</td>
         <td><input type="text" id="indata4" name="gender" size="30" value="<%=user.getGender()%>"</td><br>
-        <td>电话：</td>
+        <td>电&nbsp;&nbsp;&nbsp;话：&nbsp;&nbsp;&nbsp; </td>
         <td><input type="text" id="indata5" name="phone" size="30" value="<%=user.getPhone()%>"</td><br>
         <td>收货地址：</td>
-        <td><input type="text" id="indata5" name="address" size="60" value="<%=user.getAddress()%>"</td><br>
+        <td><input type="text" id="indata5" name="address" size="29" value="<%=user.getAddress()%>"</td><br>
         <input type="submit" value="更新"/>
         </form>
-        <table>
-        <tr height="50">
-            <td colspan="3" align="center" ><h1> 我的订单 </h1></td>
+         <tr height="50">
+            <td colspan="4" align="left" ><h1> <font size="40" color = "orange"> 我的订单 </font> </h1></td>
         </tr>
-        <tr align="center" height="30" bgcolor="lightblue">
+        <style>
+        table th , table td { border: solid 1px black }
+         
+    </style>
+        <table>
+       
+        <tr align="center" height="30" bgcolor="yellow">
          <td>订单号</td>
          <td>订单内容</td>
          <td>总金额</td>

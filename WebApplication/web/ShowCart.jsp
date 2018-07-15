@@ -56,11 +56,15 @@
 </head>
 <body>
     <% if(user.getUsername()!=null) { %>
-    <table>
-        <tr height="50">
-            <td colspan="3" align="center" ><h1>购物车</h1></td>
+   <tr height="50">
+            <td colspan="4" align="left" ><h1><font size="40" color = "orange"> 购物车 </font></h1></td>
         </tr>
-        <tr align="center" height="30" bgcolor="lightblue">
+    <table>
+          <style>
+        table  { border: solid 1px orange  }
+    </style>
+       
+        <tr align="center" height="30" bgcolor="yellow">
             <td>名称</td>
             <td>价格</td>
             <td>数量</td>
@@ -68,7 +72,7 @@
         </tr>
         <% if(buyList == null || buyList.size()== 0){ %>
         <tr height="100">
-            <td colspan="3" align="center">没有商品可以显示！</td>
+            <td colspan="4" align="center">没有商品可以显示！</td>
         </tr>
         <%
         }else{
