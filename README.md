@@ -16,16 +16,19 @@
 ## 开发工具：NetBeanS、MySQL、GitHub
 ## 过程展示
 ## 数据库构建：
-![](https://github.com/meng10270/Genius/blob/master/screenshots/%E8%B4%AD%E7%89%A9%E8%BD%A6.PNG)
+![]()
 ## MVC架构展示：
+![](https://github.com/meng10270/Genius/blob/master/screenshots/mvc.PNG)
 ## JSON应用展示：
+![](https://github.com/meng10270/Genius/blob/master/screenshots/jsonapi.PNG)
+![](https://github.com/meng10270/Genius/blob/master/screenshots/json.PNG)
 ## 效果展示：
 |**页面**|**效果图**|
 |---|---
-|用户登陆注册|
+|用户登陆注册|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C.PNG)
 |商城主页|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E4%B8%BB%E9%A1%B5.PNG)
-|购物车|
-|商品详情|
-|个人信息管理|
-|个人订单管理|
-|订单结算|
+|购物车|![]()
+|商品详情|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85.PNG)
+|个人信息管理|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF.PNG)
+|个人订单管理|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E8%AE%A2%E5%8D%95.PNG)
+|订单结算|![](https://github.com/meng10270/Genius/blob/master/screenshots/%E8%AE%A2%E5%8D%95%E7%BB%93%E7%AE%97.PNG)
