@@ -85,8 +85,8 @@
                     <img src="images/reduce.PNG" width="20" height="20"/></a>
                 <strong><%= single.getNum()%></strong>
                 <a href="DoCart.jsp?action=add_cargoods&id=<%=i%>">
-                    <img src="images/add.PNG" width="20" height="20"/>
-                </a>
+                    <img src="images/add.PNG" width="20" height="20" onlick=""/>
+                </a> 
             </td>
             <td><a href="DoCart.jsp?action=clear_item&id=<%=i%>">移除</a></td>
         </tr>

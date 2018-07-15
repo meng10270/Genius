@@ -11,8 +11,36 @@
 <a href="home.jsp" target="_top" >主页</a>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
         <title>个人中心</title>
     </head>
+    
+   
+    
+    
+    
+       <table id="news" border="1">
+			<tbody></tbody>
+		</table>
+	<script>
+		 var url = "userapi.jsp"; //文件请求
+		 $.getJSON(url, parse_data); 
+		 function parse_data(data){ 
+		 			var tbl_body = "";
+		 			var odd_even = false;
+					var count = 0;
+                                        v = data;
+		 			tbl_row += "<td>" + v.username + "</td>";
+		 			tbl_row += "<td>" + v.password + "</td>";
+		 			tbl_row += "<td>" + v.gender + "</td>";
+		 			tbl_row += "<td>"+ v.phone+ "</td>";
+		 			tbl_body += "<td>"+ v.address+ "</td>";
+		 			odd_even = !odd_even;
+		 			console.log(count , v);
+		 			$("#news tbody").html(tbl_body);
+		 		}
+	</script>    
+
     <body>
         <form action="UserAction?type=3" method="post">
         <% if(user.getUsername()!=null) {%>
@@ -85,7 +113,7 @@
         {
             System.out.println(e.getMessage());
         }
-        } else { response.sendRedirect("login.jsp"); }%>
+        } else { response.sendRedirect("index.jsp"); }%>
         </table>
     </body>
 </html>

@@ -24,7 +24,7 @@
         <% }%>
         <%if(request.getParameter("id").equals("1")) {%>
         <h1>茶花女</h1>
-        <img src="/WebApplication/images/0.jpg">
+        <img src="/WebApplication/images/1.jpg">
         <div id="detail-tag-id-3" name="detail-tag-id-3" text="内容简介" class="book-detail-item" >
         <div class="item-mt">
             <h3>商品介绍</h3>
@@ -39,7 +39,7 @@
         <% }%>
          <%if(request.getParameter("id").equals("2")) {%>
         <h1>java实用手册</h1>
-        <img src="/WebApplication/images/0.jpg">
+        <img src="/WebApplication/images/2.jpg">
         <div id="detail-tag-id-3" name="detail-tag-id-3" text="内容简介" class="book-detail-item" >
         <div class="item-mt">
             <h3>商品介绍</h3>
@@ -52,7 +52,7 @@
         <% }%>
         <%if(request.getParameter("id").equals("3")) {%>
         <h1>java script</h1>
-        <img src="/WebApplication/images/0.jpg">
+        <img src="/WebApplication/images/3.jpg">
         <div id="detail-tag-id-3" name="detail-tag-id-3" text="内容简介" class="book-detail-item" >
         <div class="item-mt">
             <h3>商品介绍</h3>
@@ -64,7 +64,7 @@
         <% }%>
         <%if(request.getParameter("id").equals("4")) {%>
         <h1>c#</h1>
-        <img src="/WebApplication/images/0.jpg">
+        <img src="/WebApplication/images/4.jpg">
         <div id="detail-tag-id-3" name="detail-tag-id-3" text="内容简介" class="book-detail-item" >
         <div class="item-mt">
             <h3>商品介绍</h3>
