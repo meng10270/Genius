@@ -19,7 +19,7 @@
         {
             GoodsSingle one = myGoodsList.findGoods(id);
             myCart.addItem(one);
-            response.sendRedirect("home.jsp");
+            response.sendRedirect("goodsDetail.jsp?id="+request.getParameter("id"));
         }
         else
         {
