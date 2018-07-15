@@ -32,7 +32,7 @@ public class DBUtils {
      */
     private static Connection getConnection() {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping?user=root&password=123456ja&useUnicode=true&characterEncoding=UTF8&useSSL=false");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopping?user=root&password=123456ja&useUnicode=true&characterEncoding=UTF8&useSSL=false");          
         } catch (SQLException e) {
             e.printStackTrace();
         }

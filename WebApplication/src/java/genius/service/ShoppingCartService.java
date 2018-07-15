@@ -6,7 +6,6 @@
 package genius.service;
 
 import genius.util.DBUtils;
-import genius.domain.User;
 
 /**
  *
