@@ -14,49 +14,53 @@
         <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
         <title>个人中心</title>
     </head>
-    
-   
-    
-    
-    
-       <table id="news" border="1">
-			<tbody></tbody>
-		</table>
-	<script>
+<script>
+		 
+		 // -- 本地请求地址（将servlet 请求的 top250 数据另存在本地, 不跨站, 便于本地调试）
 		 var url = "userapi.jsp"; //文件请求
-		 $.getJSON(url, parse_data); 
-		 function parse_data(data){ 
-		 			var tbl_body = "";
-		 			var odd_even = false;
-					var count = 0;
-                                        v = data;
-		 			tbl_row += "<td>" + v.username + "</td>";
-		 			tbl_row += "<td>" + v.password + "</td>";
-		 			tbl_row += "<td>" + v.gender + "</td>";
-		 			tbl_row += "<td>"+ v.phone+ "</td>";
-		 			tbl_body += "<td>"+ v.address+ "</td>";
-		 			odd_even = !odd_even;
-		 			console.log(count , v);
-		 			$("#news tbody").html(tbl_body);
-		 		}
-	</script>    
+		 $.getJSON(url, parse_data);
+		 console.log(" get data done ");
 
+		 function parse_data(data){ 
+			 		$("#indata1").val(data.username)
+					$("#indata2").val(data.password)
+			 		$("#indata3").val(data.fullname)
+					$("#indata4").val(data.gender)
+			 		$("#indata5").val(data.phone)
+					$("#indata6").val(data.address)
+			 		// 将 JSON 对象转换为字符串进行输出
+		 			$("#news tbody").html(JSON.stringify(data));
+					
+					$("#pdata").html(JSON.stringify(data));
+					console.log(data);
+					
+					// 使用JSON链接改变 a 与 img 
+					$("#adata").html(data.name)
+					$("#adata").attr("href", data.url)
+					
+					$("#imgdata").attr("src", data.url)
+					
+					console.log(" load data done ");
+		 			
+		 		}
+		 		// ); //-使用匿名函数, 需要去掉这里的注释
+	</script>
     <body>
         <form action="UserAction?type=3" method="post">
         <% if(user.getUsername()!=null) {%>
         <h1>我的信息</h1>
         <td>用户名：</td>
-        <td><input type="text" name="username" size="30" value="<%=user.getUsername()%>" readonly="true"</td><br>
+        <td><input type="text" id="indata1" name="username" size="30" value="<%=user.getUsername()%>" readonly="true"</td><br>
         <td>密码：</td>
-        <td><input type="password" name="password" size="30" value="<%=user.getPassword()%>"</td><br>
+        <td><input type="password" id="indata2" name="password" size="30" value="<%=user.getPassword()%>"</td><br>
         <td>姓名：</td>
-        <td><input type="text" name="fullname" size="30" value="<%=user.getFullname()%>"</td><br>
+        <td><input type="text" id="indata3" name="fullname" size="30" value="<%=user.getFullname()%>"</td><br>
         <td>性别：</td>
-        <td><input type="text" name="gender" size="30" value="<%=user.getGender()%>"</td><br>
+        <td><input type="text" id="indata4" name="gender" size="30" value="<%=user.getGender()%>"</td><br>
         <td>电话：</td>
-        <td><input type="text" name="phone" size="30" value="<%=user.getPhone()%>"</td><br>
+        <td><input type="text" id="indata5" name="phone" size="30" value="<%=user.getPhone()%>"</td><br>
         <td>收货地址：</td>
-        <td><input type="text" name="address" size="60" value="<%=user.getAddress()%>"</td><br>
+        <td><input type="text" id="indata5" name="address" size="60" value="<%=user.getAddress()%>"</td><br>
         <input type="submit" value="更新"/>
         </form>
         <table>
